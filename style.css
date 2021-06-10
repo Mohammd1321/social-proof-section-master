@@ -1,0 +1,177 @@
+*,
+*::after,
+*::before {
+  margin: 0px;
+  padding: 0px;
+  box-sizing: border-box;
+  font-family: 'Spartan', sans-serif;
+  list-style: none;
+}
+
+:root {
+  --dark-magneta:  hsl(300, 43%, 22%);
+  --soft-pink:  hsl(333, 80%, 67%);
+  --dark-grayish-marneta: hsl(303, 10%, 53%);
+  --light-magneta: hsl(300, 24%, 96%);
+}
+
+
+html {
+  font-size: 15px;
+}
+
+body {
+  min-height: 100vh;
+  display: grid;
+  place-items: center;
+}
+
+
+
+.reviewsContainer {
+  display: flex;
+  justify-content: space-between;
+}
+
+.container {
+  width: min(1250px,95%);
+  margin: 0px auto;
+}
+
+
+.description {
+  width: min(600px,100%);
+}
+
+
+.description h1 , .starContainer span {
+  color: var(--dark-magneta);
+  font-weight: 700;
+}
+
+.description h1 {
+  font-size: 3.7rem;
+}
+
+
+.description h3 {
+  color: var(--dark-grayish-marneta);
+  line-height: 30px;
+  margin-top: .8rem;
+}
+
+
+.starContainer {
+  width: 450px;
+  display: flex;
+  align-items: center;
+  background-color: var(--light-magneta);
+  padding: 1.5rem 0rem 1.5rem 1.5rem;
+  margin: 1.5rem 0rem;
+  border-radius: 7px;
+}
+.starContainer:nth-child(2) {
+  margin-left: 3rem;
+}
+.starContainer:nth-child(3) {
+  margin-left: 6rem;
+}
+
+
+.starContainer span {
+  margin-left: 2rem;
+}
+
+.cardsContainer {
+  display: flex;
+  margin-top: 5rem;
+}
+
+
+.eachCard {
+  height: 250px;
+  width: min(395px,100%);
+  background-color: var(--dark-magneta);
+  border-radius: 5px;
+  padding: 2rem 3rem;
+}
+
+
+
+.eachCard:nth-child(2) {
+  margin: 1.5rem 2rem 0rem 2rem;
+}
+.eachCard:nth-child(3) {
+  margin-top: 3rem;
+}
+
+
+.wrapper {
+  display: flex;
+  align-items: center;
+}
+
+.eachCard p {
+  margin-top: 1.5rem;
+  font-size: .9rem;
+  line-height: 25px;
+  font-weight: 500;
+}
+
+.buyers img {
+  border-radius: 50%;
+  width: 45px;
+}
+
+.buyerInfo {
+  padding-left: 1.5rem;
+}
+
+
+.buyerInfo h4:first-child , .eachCard p {
+  color: white;
+}
+
+.buyerInfo h4:nth-child(2) {
+  color: var(--soft-pink);
+}
+
+
+@media (max-width: 1124px) {
+  .reviewsContainer {
+    text-align: center;
+    align-items: center;
+  }
+  .starContainer,.cardsContainer,.reviewsContainer {
+    flex-direction: column;
+  }
+  .description h1 {
+    font-size: 2.2rem;
+  }
+  .cardsContainer {
+    margin-top: 1.5rem;
+    align-items: center;
+  }
+  .eachCard {
+    height: auto;
+  }
+.eachCard:nth-child(2) {
+   margin: 2rem 0rem;
+}
+.eachCard:nth-child(3) {
+  margin-top: initial;
+}
+.stars {
+  width: min(500px,100%);
+}
+.starContainer {
+  padding: 1.5rem;
+  width: 100%;
+}
+.starContainer:nth-child(2),.starContainer:nth-child(3), .starContainer span {
+  margin-left: initial;
+}
+.starContainer span {
+  padding-top: .5rem;
+}
+}
